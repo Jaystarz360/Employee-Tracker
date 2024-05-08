@@ -267,3 +267,38 @@ askQ();
 });
 };
   
+// Function to view budeget
+function viewBudget() {
+  inquirer.prompt(viewBudgetQuest).then((ans) => {
+  const budDept = ans.deptBud;
+  db.query(
+    `SELECT SUM(salary) AS Budget FROM role_tbl
+    Join emp_tbl on emp_tbl.role_id = role_tbl.id
+    WHERE role_tbl.dept_id = ?;`,
+    budDept,
+    (err, results) => {
+    if (err) {
+      console.log(`Error calculating budget...`);
+      inquirer.prompt(pause).then(() => {
+
+askQ();
+});
+
+    } else {
+    if (!results[0].Budget) {
+      console.log("This deparment has no budget...");
+      inquirer.prompt(pause).then(() => {
+
+askQ();
+});
+    } else {
+      console.log(
+      `This budget is \$${results[0].Budget} for this department...` );
+      inquirer.prompt(pause).then(() => {
+askQ();
+});
+}}});
+});
+};
+
+askQ();
