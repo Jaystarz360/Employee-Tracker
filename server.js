@@ -6,13 +6,11 @@ const app = express();
 const { pause, addDeptQuest, viewBudgetQuest } = require("./util/questions");
 
 const {
-  addRoleQuest,
-  addEmpQuest,
-  updEmpRoleQuest,
-  question,
-  whichDeptQuest,
+
 } = require("./util/questions");
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 // Connect to database
 const db = mysql.createConnection(
