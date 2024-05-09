@@ -1,8 +1,8 @@
 const fs = require("fs/promises");
+const express = require("express");
 const inquirer = require("inquirer");
 const mysql = require("mysql2");
 const app = express();
-const express = require("express");
 const { pause, addDeptQuest, viewBudgetQuest } = require("./util/questions");
 
 const {
@@ -23,7 +23,7 @@ const db = mysql.createConnection(
     user: "root",
     password: "Nightlife001!",
     database: "emp_track_db",
-  },
+},
     
   console.log(`Connected to the database...`)
   );
