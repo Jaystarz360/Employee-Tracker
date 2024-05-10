@@ -1,10 +1,8 @@
-const question = 
-
-[
+const question = [
 {type: 'list',
  name: 'task',
  message: "Please select a task...",
-   choices: [{
+choices: [{
  name:'View all departments'},
 {name:'View all roles'},
 {name:'View all employees'},
@@ -21,8 +19,7 @@ const question =
 const addDeptQuest = [
 {type: 'input',
  name: 'newDept',
- message: "Please enter the new department name..."},
-];
+ message: "Please enter the new department name..."}];
     
 const addRoleQuest = [
 {type: 'input',

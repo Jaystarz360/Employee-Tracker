@@ -33,7 +33,7 @@ After installation of PackageJSON and sourcing the database and seed, begin the 
 
 ## Tests
 Test case seen in the following walkthrough: <br>
-[Video Walkthrough]()
+[Video Walkthrough](https://drive.google.com/file/d/1CQNjgVb7CJ8a26NGqUzdFNGXceBPjRdn/view?usp=sharing)
 
 ## License
 This software is covered under the following license:
