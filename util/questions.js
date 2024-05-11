@@ -1,27 +1,46 @@
-const question = [
-{type: 'list',
- name: 'task',
- message: "Please select a task...",
-choices: [{
- name:'View all departments'},
-{name:'View all roles'},
-{name:'View all employees'},
-{name:'Add a department'},
-{name:'Add a role'},
-{name:'Add an employee'},
-{name:'Update an employee role'},
-{name:'View employees by department'},
-{name:'View the budget for a department'},
-{name:'Exit'},
-]}
-];
+const questions = [{
+  type: 'list',
+  name: 'task',
+  message: "Please select a task...",
 
-const addDeptQuest = [
+choices: [
+{
+ name:'View departments...',
+},
+{
+  name:'View roles...',
+},
+{
+  name:'View employees...',
+},
+{
+  name:'Add a department...',
+},
+{
+  name:'Add a role...',
+},
+{
+  name:'Add an Employee...',
+},
+{
+  name:'Update an employee role...',
+},
+{
+  name:'View employees by department...',
+},
+{
+  name:'View the budget for a department...',
+},
+{
+name:'Exit',
+}]}];
+
+const addDeptmark = [
 {type: 'input',
  name: 'newDept',
  message: "Please enter the new department name..."}];
     
-const addRoleQuest = [
+const addRolemark = [
 {type: 'input',
  name: 'newRole',
  message: "Please enter the new role name..."},
@@ -34,7 +53,7 @@ const addRoleQuest = [
 ];
   
 
-const addEmpQuest = [
+const addEmpmark = [
 {type: 'input',
  name: 'newEmpFirst',
  message: "Please enter the new employee's first name..."},
@@ -50,7 +69,7 @@ const addEmpQuest = [
 ];
 
 
-const updEmpRoleQuest = [
+const updEmproleMark = [
 {type:'input',
  name:'empToUpd',
  message:'Enter employee number to update their role...'},
@@ -59,13 +78,13 @@ const updEmpRoleQuest = [
  message:'Enter new role for employee...'},
 ];
   
-const viewBudgetQuest = [
+const viewBudgetmark = [
 {type:'input',
  name:'deptBud',
  message:`Which department's budget would you like to see...`},
 ];
 
-const whichDeptQuest = [
+const whichDeptmark = [
 {type:'input',
  name: 'whichDept',
  message: 'Please enter a department ID to view the employees...'},
@@ -78,12 +97,12 @@ message:'Press enter for menu...'},
 ];
   
 module.exports = {
-question:question,
-addDeptQuest:addDeptQuest,
-addRoleQuest:addRoleQuest,
-addEmpQuest:addEmpQuest,
-updEmpRoleQuest:updEmpRoleQuest,
-viewBudgetQuest:viewBudgetQuest,
-whichDeptQuest:whichDeptQuest,
-pause:pause
-};
+    questions:questions,
+    addDeptmark:addDeptmark,
+    addRolemark:addRolemark,
+    addEmpmark:addEmpmark,
+    updEmproleMark:updEmproleMark,
+    viewBudgetmark:viewBudgetmark,
+    whichDeptmark:whichDeptmark,
+    pause:pause
+  };
